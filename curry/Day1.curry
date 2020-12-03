@@ -1,4 +1,5 @@
 import List
+import Read
 
 solve2 l r = a + b =:= 2020 & r =:= a * b
   where a = anyOf l
@@ -11,6 +12,6 @@ solve3 l r = a + b + c =:= 2020 & r =:= a * b * c
 
 main = do
   text <- readFile "../day1.txt"
-  let nums = map read $ lines text
+  let nums = map readInt $ lines text
   print . findfirst $ solve2 nums
   print . findfirst $ solve3 nums
