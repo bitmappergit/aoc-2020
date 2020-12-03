@@ -41,4 +41,5 @@ solve2 (((a, b), c, pass) : xs)
 main :: IO ()
 main = do
   Right temp <- parseFromFile (manyTill parser eof) "../day2.txt"
-  print temp 
+  print $ solve1 temp 
+  print $ solve2 temp
